@@ -1,26 +1,7 @@
 import React, { Component } from 'react';
-
-function getSlicedArray(desiredComment, comments) {
-    let newCommentArray = [];
-    let counterOfArray = 0;
-    comments.map(data => {
-        if(desiredComment === data.Title) {
-            newCommentArray[counterOfArray] = data
-            counterOfArray++;
-        }
-    })
-    return newCommentArray
-}
-
-function checkData(allData, title) {
-    let checkTheTitle = false
-    allData.map(data => {
-        if (data.Title===title.Title) {
-            checkTheTitle = true;
-        }
-    })
-    return checkTheTitle;
-}
+import { getSlicedArray } from './functions/getSlicedArray';
+import { checkData } from './functions/checkData';
+import fetch from 'node-fetch'
 
 class appContainer extends Component {
     constructor(props) {
@@ -47,7 +28,6 @@ class appContainer extends Component {
     this.createMovieTable = this.createMovieTable.bind(this);
     this.createCommentTable = this.createCommentTable.bind(this);
     this.searchByTitle = this.searchByTitle.bind(this);
-
     }
     
     searchByTitle = (e) => {
@@ -75,8 +55,7 @@ class appContainer extends Component {
         if( this.state.title !== '') {
             fetch('http://www.omdbapi.com/?t=' + this.state.title + apiKey).then(resp => resp.json()).then((data) => {
                 if (data.Response === 'True') {
-                     if ( checkData(this.state.allMovies, data) === false )  {
-                        console.log(data)
+                     if ( checkData(this.state.allMovies, data.Title) === false )  {
                         fetch('http://localhost:5000/movies', {
                             method: 'POST',
                             headers: {
@@ -104,7 +83,7 @@ class appContainer extends Component {
 
     handleCommentSubmit = (e) => {
         if (this.state.comment !== '') {
-            this.setState({ commentError: '' })
+            this.setState({  })
             this.state.allMovies.map(data => {
                 if (data.Title === this.state.movieToComment || this.state.movieToComment.length === 0) {
                     data = { 
@@ -191,8 +170,8 @@ class appContainer extends Component {
             else { 
                 this.setState({ 
                     allMovies: allMovies,
-                    movieToComment: 'Show all comments',
-                    //movieToComment: allMovies[0].Title 
+                    movieToComment: allMovies[0].Title,
+                    movieCommentToDisplay: 'Show all comments'
                 }) 
             }
         })

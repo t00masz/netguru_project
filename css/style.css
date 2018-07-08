@@ -1,0 +1,163 @@
+.main-header {
+  color: #000;
+  padding-top: 40px;
+  text-align: center;
+  font-family: Garamond;
+  font-size: 50px;
+}
+
+.user-container {
+  max-width: 400px;
+  padding-top: 5px; 
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 280px; 
+}
+
+.user-container__label {
+  position: relative;
+  font-family: garamond;
+  font-size: 40px;
+  left: 50%;
+  width: 300px;
+  margin-left:-150px;
+  text-align: center;
+}
+
+.user-container__name-input {
+  position: absolute;
+  border:0.5px solid black;
+  background: ghostwhite;
+  font-family: garamond;
+  font-size: 20px;
+  color :black;     
+  width: 400px;
+  height: 30px;
+  top: 80px
+}
+.user-container__lastName-input {
+  position: absolute;
+  border:0.5px solid black;
+  background: ghostwhite;
+  font-family: garamond;
+  font-size: 20px;
+  color :black;     
+  width: 400px;
+  height: 30px;
+  top: 150px
+}
+.user-container__email-input {
+  position: absolute;
+  border:0.5px solid black;
+  background: ghostwhite;
+  font-family: garamond;
+  font-size: 20px;
+  color :black;     
+  width: 400px;
+  height: 30px;
+  top: 220px
+}
+
+.user-container__name-error {
+  position: absolute;
+  font-family: garamond;
+  font-size: 20px;
+  height: 20px;
+  text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 -0.4px black;
+  color :red;   
+  top: 115px
+}
+
+.user-container__lastName-error {
+  position: absolute;
+  font-family: garamond;
+  font-size: 20px;
+  height: 20px;
+  text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 -0.4px black;
+  color :red;   
+  top: 185px
+}
+
+.user-container__email-error {
+  position: absolute;
+  font-family: garamond;
+  font-size: 20px;
+  height: 20px;
+  text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 -0.4px black;
+  color :red;   
+  top: 255px
+}
+
+.date-container {
+  max-width: 400px;
+  padding-top: 230px; 
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.date-container__label {
+  position: relative;
+  font-family: garamond;
+  font-size: 40px;
+  left: 50%;
+  width: 300px;
+  margin-left:-150px;
+  text-align: center;
+}
+
+.date-container__date-input {
+  position: relative;
+  border:1px solid black;
+  background: ghostwhite;
+  font-family: garamond;
+  font-size: 20px;
+  color :black;     
+  width: 150px;
+  height: 30px;
+  left: 50%;
+  margin-left:-75px;
+  text-align: center;
+}
+
+.date-container__date-error {
+  position: absolute;
+  font-family: garamond;
+  font-size: 20px;
+  height: 20px;
+  width: 250px;
+  left: 50%;
+  margin-left:-125px;
+  text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 -0.4px black;
+  color :red;   
+  top: 545px;
+  text-align: center
+}
+
+.date-container_button-submit {
+  position: relative;
+  left: 50%;
+  border:1px solid black;
+  background: ghostwhite;
+  font-family: garamond;
+  font-size: 30px;
+  color :black;     
+  width: 200px;
+  height: 60px;
+  margin-left: -100px;
+  top: 40px
+}
+
+.date-container_button-submit:active {
+  margin-left: -90px;
+  width: 180px;
+  height: 50px;
+}
+
+
+
+
+
+
+

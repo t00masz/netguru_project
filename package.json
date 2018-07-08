@@ -1,24 +1,33 @@
 {
-  "name": "react_node",
+  "name": "movieapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "start.sh",
     "build": "webpack --config webpack.config.js ",
+<<<<<<< HEAD
     "serverStart": "nodemon index.js localhost 5000",
+    "test": "jest --config=jest.config.json --watchAll"
+=======
+    "serverStart": "nodemon index.js",
     "frontendStart": "live-server",
-    "test": "jest --watch"
+    "test": "jest --watchAll"
+>>>>>>> 8dc41f5cf1c2fb0df583f2b6ebac658379088414
   },
   "author": "Tomasz Ratman",
   "license": "ISC",
   "dependencies": {
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "body-parser": "^1.18.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.16.3",
     "jest": "^23.1.0",
     "live-server": "^1.2.0",
@@ -28,8 +37,10 @@
     "nodemon": "^1.17.3",
     "react-redux": "^5.0.7",
     "react-scripts": "^1.1.4",
+    "react-test-renderer": "^16.4.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
+    "render-shallow": "^1.1.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
   },
