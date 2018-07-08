@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Movie = require('../schemas/MovieData');
+const Movie = require('../schemas/movieData');
 const Comment = require('../schemas/CommentData');
 
 router.get('/allMovies', function(req, res, next){
