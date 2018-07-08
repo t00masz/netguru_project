@@ -56,14 +56,14 @@ class appContainer extends Component {
             fetch('http://www.omdbapi.com/?t=' + this.state.title + apiKey).then(resp => resp.json()).then((data) => {
                 if (data.Response === 'True') {
                      if ( checkData(this.state.allMovies, data.Title) === false )  {
-                        fetch('http://localhost:5000/movies', {
+                        fetch('./movies', {
                             method: 'POST',
                             headers: {
                             'Content-Type': 'application/json'
                             },
                             body: JSON.stringify(data),
                         })
-                        fetch('http://localhost:5000/allMovies', {
+                        fetch('./allMovies', {
                             method: 'GET',})
                         .then(res => res.json())
                         .then(allMovies => {
@@ -90,7 +90,7 @@ class appContainer extends Component {
                         Title: this.state.movieToComment,
                         Comment: this.state.comment
                     }
-                    fetch('http://localhost:5000/comments', {
+                    fetch('./comments', {
                         method: 'POST',
                         headers: {
                         'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ class appContainer extends Component {
                     })
                 }
             })
-            fetch('http://localhost:5000/allComments', {
+            fetch('./allComments', {
                 method: 'GET',})
             .then(res => res.json())
             .then(allComments => {
@@ -160,7 +160,7 @@ class appContainer extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:5000/allMovies', {
+        fetch('./allMovies', {
             method: 'GET'})
         .then(res => res.json())
         .then(allMovies => {
@@ -175,7 +175,7 @@ class appContainer extends Component {
                 }) 
             }
         })
-        fetch('http://localhost:5000/allComments', {
+        fetch('./allComments', {
             method: 'GET',})
         .then(res => res.json())
         .then(allComments => {
