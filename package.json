@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "startLocal": "start.sh",
-    "build": "webpack --config webpack.config.js -p --env production ",
+    "build": "webpack --config webpack.config.js",
     "serverStart": "nodemon index.js localhost 5000",
     "test": "jest --config=jest.config.json --watchAll",
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "npm run build"
+  },
+  "engines": {
+    "node": "8.9.3"
   },
   "author": "Tomasz Ratman",
   "license": "ISC",
