@@ -53,7 +53,7 @@ class appContainer extends Component {
     handleMovieSubmit = () => {
         const apiKey = "&apikey=c81aa435"
         if( this.state.title !== '') {
-            fetch('http://www.omdbapi.com/?t=' + this.state.title + apiKey).then(resp => resp.json()).then((data) => {
+            fetch('https://www.omdbapi.com/?t=' + this.state.title + apiKey).then(resp => resp.json()).then((data) => {
                 if (data.Response === 'True') {
                      if ( checkData(this.state.allMovies, data.Title) === false )  {
                         fetch('./movies', {
