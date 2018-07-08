@@ -12,8 +12,8 @@ app.use(function(req, res, next) {
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/movieDatabase', error => {
-//mongoose.connect('mongodb://oto_masz:netguru1@ds221631.mlab.com:21631/moviedatabase', error => {
+//mongoose.connect('mongodb://localhost/movieDatabase', error => {
+mongoose.connect('mongodb://oto_masz:netguru1@ds221631.mlab.com:21631/moviedatabase', error => {
 if (error) {
         console.log(`Database is not connected! Program needs to be restarted after connecting with database.`)
     }
