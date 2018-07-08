@@ -6,14 +6,8 @@
   "scripts": {
     "start": "start.sh",
     "build": "webpack --config webpack.config.js ",
-<<<<<<< HEAD
     "serverStart": "nodemon index.js localhost 5000",
     "test": "jest --config=jest.config.json --watchAll"
-=======
-    "serverStart": "nodemon index.js",
-    "frontendStart": "live-server",
-    "test": "jest --watchAll"
->>>>>>> 8dc41f5cf1c2fb0df583f2b6ebac658379088414
   },
   "author": "Tomasz Ratman",
   "license": "ISC",
