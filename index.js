@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const routes = require('./routes/movies');
 const app = express();
+const port = process.env.PORT || 5000;
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -18,7 +19,7 @@ if (error) {
         console.log(`Database is not connected! Program needs to be restarted after connecting with database.`)
     }
     else {
-         console.log('App is listening (port 5000)')
+         console.log('App is listening')
     }
 })
 
@@ -28,5 +29,5 @@ app.use(express.static('public'))
 
 app.use(routes);
 
-app.listen(5000); 
+app.listen(port); 
 

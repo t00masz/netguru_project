@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "start.sh",
+    "startLocal": "start.sh",
     "build": "webpack --config webpack.config.js ",
     "serverStart": "nodemon index.js localhost 5000",
-    "test": "jest --config=jest.config.json --watchAll"
+    "test": "jest --config=jest.config.json --watchAll",
+    "start": "node server.js"
   },
   "author": "Tomasz Ratman",
   "license": "ISC",

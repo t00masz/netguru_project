@@ -1,2 +1,2 @@
-To start an app: npm run start
+To start an app: npm run startLocal
 To test: npm test
